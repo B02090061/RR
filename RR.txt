@@ -1,0 +1,469 @@
+x <- 5
+x
+
+y <- c(1,2,3,4,5)
+plot(y)
+
+z <- c(12,22,20,42,52)
+plot(y,z)
+
+demo(grapics)
+
+data(iris)
+plot(iris)
+
+install.packages("ggmap")
+library(ggmap)
+map.taiman <- get_map(locator="taiwan",xoom=8)
+ggmap(map.taiman)
+
+install.packages("C50")
+library(C50)
+remove.packages("C50")
+#套件更新
+update.packages()
+
+#R練習
+x <- 10
+x
+y <- x^2
+y
+z <-sqrt(y)
+z
+
+#型態(mode)與長度(Length)
+x1 <- 10
+mode(x1)
+length(X1)
+
+x2 <- 10.11
+mode(x2)
+length(X2)
+
+x3 <- T
+x3
+mode(x3)
+length(X3)
+
+x4 <- "Hello"
+mode(x4)
+length(X4)
+
+x5<-4+2i
+mode(x5)
+length(X5)
+
+x6 <- c(1,2,3,4,5)
+mode(x6)
+length(X6)
+
+#矩陣matrix
+x <- matrix(1:24,nrow=4,ncol=6,byrow=true)
+x
+y <- matrix(1:24,nrow=4,ncol=6,byrow=false)
+y
+#cbind()&rbind()
+x1 <- c(1,2,3)
+x2 <- c(4,5,6)
+x3 <- c(7,8,9)
+xc <- cbind(x1,x2,x3)
+xc
+xr <- rbind(x1,x2,x3)
+xr
+#轉置Transposition
+xc_t <- t(xc)
+xc_t
+
+nrow(x)
+ncol(x)
+x[1,]
+x[,2]
+x[2,3]
+eigen(xc)
+xc
+xr
+z <- xc %% xr
+z
+
+#陣列array
+x <- 1:24
+dim(x) <- c(4,6)
+x
+x <- array(1:24,dim=c(4,6))
+x[2,4]
+dim(x) <- c(3,4,2)
+x
+x[2,3,1]
+x[3,1,2]
+
+x <- array(0,dim=c(4,6))
+x
+#因子factor
+x <- factor(c("男","女","男","男","女"))
+x
+#dataframe(資料框架)
+id <- c(1,2,3,4)
+sex <- c("male","male","female","female")
+pay <- c(30000,4000,45000,50000)
+
+x_dataframe <- data.frame(id,age,sex,pay)
+x_dataframe
+
+x_dataframe[3,2]
+x_dataframe[4,]
+x_dataframe[2]
+x_dataframe$age
+x_dataframe <- edit(x_dataframe)
+x_dataframe
+
+#list列表id<-c(1,2,3)
+sex<-c("male","male',female")
+pay<-c(3000,4000,45000)
+y_dataframe<-data.frame(id,sex,pay)
+gender<-factor(c("男","男","女"))
+paul.family<-list(name="paul",wife="iris",
+no.kids=3,kids.age=c(25,28,30),gender,y_dataframe)
+
+paul.family
+paul.family$kids.age
+paul.family[4]
+paul.family[[4]]
+
+paul.family$kids.age[2]
+paul.family[4][2]
+paul.family[[4]][2]
+
+#CH2 資料的讀取與寫入
+getwd()
+setwd("c:/")
+getwd()
+
+x <- read.table("x.csv" , sep=",", header=TRUE)
+x
+x$age
+x[1,2]
+
+#入門
+x <- 5
+x
+
+#畫圖一
+y <- c(1,2,3,4,5)
+plot (y)
+
+#畫圖二
+z <- c(2,5,3,4,8)
+plot(y,z)
+
+#圖形示範
+demo(graphics)
+
+#iris圖形
+data(iris)
+plot(iris)
+
+#台灣地圖
+install.packages("ggmap")
+library("ggmap")
+map.taiwan <- get_map(location="Taiwan",zoom=8)
+ggmap(map.taiwan)
+
+#套件安裝
+install.packages("C50")
+
+#套件載入
+library(C50)
+
+#套件移除
+remove.packages("C50")
+
+#套件更新
+update.packages()
+
+#R練習
+x <- 10
+x
+y <- x^2
+y
+z<-sqrt(y)
+z
+
+#型態(mode)與長度(length)
+x1<-10
+mode(x1)
+length(x1)
+x2<-10.11
+mode(x2)
+length(x2)
+x3<-T
+x3
+mode(x3)
+length(x3)
+x4<-"Hello"
+mode(x4)
+length(x4)
+x5<-4+2i
+mode(x5)
+length(x5)
+x6<-c(1,2,3,4,5)
+mode(x6)
+length(x6)
+
+#vector(向量)
+v <- c(10,5,3.1,6.4,9.2,21.7)
+v
+length(v)
+mode(v)
+
+#NA(缺值)
+v <-c(10,5,NA,6.4,9.2,21.7)
+v
+v[2]
+v2 <- 1:10
+v2
+v2[1]
+
+#Matrix(矩陣)
+x <-matrix(1:24,nrow = 4,ncol = 6,byrow = TRUE)
+x
+
+y <-matrix(1:24,nrow = 4,ncol = 6,byrow = FALSE)
+y
+
+#cbind()&rbind()
+x1<-c(1,2,3)
+x2<-c(4,5,6)
+x3<-c(7,8,9)
+xc<-cbind(x1,x2,x3)
+xc
+xr<-rbind(x1,x2,x3)
+xr
+
+#轉置(Transposition)
+xc_t <- t(xc)
+xc_t
+
+nrow(x)
+ncol(x)
+x[1,]
+x[,2]
+x[2,3]
+eigen(xc)
+xc
+xr
+z<-xc%*%xr
+z
+
+#Array(陣列)
+x<- 1:24
+dim(x)<- c(4,6)
+x<-array(1:24,dim=c(4,6))
+x
+x[2,4]
+dim(x)<-c(3,4,2)
+x<-array(1:24,dim=c(3,4,2))
+x
+x[2,3,1]
+x[3,1,2]
+
+x<-array(0,dim=c(4,6))
+x
+
+#Factor(因子)
+x <- factor(c("男","女","男","男","女"))
+x
+
+#dataframe(資料框架)
+id<- c(1,2,3,4)
+age<-c(25,30,35,40)
+sex<-c("Male","Male","Female","Female")
+pay<-c(30000,40000,45000,50000)
+x_dataframe<-data.frame(id,age,sex,pay)
+x_dataframe
+
+x_dataframe[3,2]
+x_dataframe[4,]
+x_dataframe[2]
+x_dataframe$age
+x_dataframe <-edit(x_dataframe)
+x_dataframe
+
+#list 列表
+id<-c(1,2,3)
+sex<-c("male","male","female")
+pay<-c(30000,40000,50000)
+y_dataframe<-data.frame(id,sex,pay)
+gender<-factor(c("男","男","女"))
+paul.Family<-list(name="Paul",wife="Iris",no.kids=3,kids.age=c(25,28,30),gender,y_dataframe)
+paul.Family
+
+#CH2 資料讀取與寫入
+getwd()
+setwd("c:/")
+getwd()
+
+#讀檔
+X<-read.table("X.csv",sep=",",header = TRUE)
+X
+str(X)
+X$age
+X[1,2]
+
+X<-read.table("X.csv",sep=",",header = FALSE)  #錯誤
+X
+str(X)
+
+X <- read.csv("X.csv",header = TRUE)
+X
+
+X<-read.table("X.txt",sep=" ",header = TRUE)  #錯的
+X
+
+X<-read.table("X.txt",sep="\t",header = TRUE)
+X
+
+X<-read.table("X.txt",header = TRUE)
+X
+
+X <- scan("")
+X
+
+my <- scan(file="",what = list(name="",pay=integer(0),sex=""))
+my
+
+X <- scan("X1.csv",sep=",")
+X
+
+X <- scan("X1.txt")
+X
+
+write.table(X,"C:/X_File.csv",row.names = FALSE,col.names = FALSE,sep = ",")
+
+X <- scan("X1.csv",sep=",",what = list(id=integer(0),age=integer(0),pay=integer(0)))
+X
+
+write.table(X,"C:/X_File1.csv",row.names = FALSE,col.names = TRUE,sep = ",")
+
+#data()內建資料庫
+data()
+
+
+data(iris)
+iris
+
+#第三章流程控制
+a <- c(1,2,3)
+x <- a+2
+x
+
+#()直接顯示結果
+(x <- a+2)
+
+#1
+setwd("c:/cert/")
+x <- read.csv("A-1.csv",header=FALSE)
+x
+str(x)
+x <- as.matrix(x)
+mean(x)
+summary(x)
+
+#2
+setwd("c:/cert/")
+x <- read.csv("A-3.csv",header=FALSE)
+x
+str(x)
+x <- as.matrix(x)
+max(x)
+
+#3
+setwd("c:/cert/")
+x <- read.csv("A-4.csv",header=FALSE)
+x
+str(x)
+x <- as.matrix(x)
+quantile(x,0.25)
+summary(x)
+
+#4
+setwd("c:/cert/")
+x <- read.csv("A-5.csv",header=TRUE)
+x
+str(x)
+x <- as.matrix(x)
+max(x)-min(x)
+
+#5
+setwd("c:/cert/")
+x <- read.csv("A-6.csv",header=FALSE)
+x
+str(x)
+x <- as.matrix(x)
+var(x)
+
+#6
+setwd("c:/cert/")
+x <- read.csv("c-1.csv",header=TRUE)
+x
+hour <- x[2]
+grade <- x[3]
+cor(hour,grade)
+cor(grade,hour)
+
+#7
+list#串列或是列表(彈性最大)
+
+#8
+R包含的迴圈:#for while repeat
+
+#9
+x <- 2
+if (x<3) y=NA else y=5
+print(y) #NA
+
+#10
+exec <- function(x) {
+  if (x==0) x_sum=1
+  else
+    x_sum= x*exec(x-1)
+return(x_sum)  
+}
+exec(4)#24
+
+#11
+
+#12
+a <- matrix(1:12, nrow = 3, byrow = TRUE)
+a
+apply(a,1,sum)
+apply(a,2,sum)
+
+#13
+x <- c(1,1,1,3,2,2,3)
+table(x)
+
+#14 
+#identity(互動式繪圖);hist plot pairs(高階繪圖)
+
+#15 2x3 matrix
+x <- c(1,2,5)
+Y <- c(3,5,10)
+(rbind(X,Y))
+
+#16
+x <- c(1,2,3)
+summary(x)
+
+#17#
+
+#18 變數宣告第一個字母須為英文字母或者句點。
+
+#19
+ifelse(2>=3,2,3)
+
+#20
+x1 <- 9%%5
+x2 <- 9%/%2
+x1
+x2
+(9/2)
